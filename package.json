@@ -2,15 +2,15 @@
   "dependencies": {
     "express": "^4.18.3",
     "mongodb": "^6.4.0",
-    "mongoose": "^8.2.1"
+    "mongoose": "^8.2.1",
+    "nodemon": "^3.1.0"
   },
   "name": "pruebas_node",
   "description": "",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
-    "developer":"npx nodemon index.js",
+    "andres": "npx nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
