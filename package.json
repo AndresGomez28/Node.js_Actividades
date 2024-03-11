@@ -11,6 +11,7 @@
   "main": "index.js",
   "scripts": {
     "andres": "npx nodemon index.js",
+    "andres-2":"npx nodemon index-2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
