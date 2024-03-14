@@ -1,0 +1,16 @@
+###
+GET http://localhost:3000/api/v1/users HTTP/1.1
+Content-Type: application/json
+
+{}
+
+###
+POST http://localhost:3000/api/v1/users HTTP/1.1
+Content-Type: application/json
+{
+    id: 2,
+    nombres: "Andres Felipe",
+    apellidos: "Gomez Piedrahita",
+    correo: "correo2@correo.com",
+    edad: 32
+}

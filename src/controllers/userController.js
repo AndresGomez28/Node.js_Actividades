@@ -15,6 +15,7 @@ const userController = {
     // Crear un nuevo usuario
     createUser: async (req, res) => {
         const userData = req.body;
+        console.log(userData);
         try {
             const newUser = new User(userData);
             const savedUser = await newUser.save();
@@ -45,9 +46,8 @@ const userController = {
 
     // Eliminar un usuario existente
     deleteUser: async (req, res) => {
-        const userId = req.params.id;
         try {
-            const deletedUser = await User.findByIdAndDelete(userId);
+            const deletedUser = await User.deleteMany();
             if (!deletedUser) {
                 return res.status(404).json({ message: 'Usuario no encontrado' });
             }
