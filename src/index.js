@@ -9,6 +9,9 @@ const port = 3000;
 // Conecta a la base de datos MongoDB
 connectDB();
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
 // Configura las rutas
 app.use('/', routes);
 
