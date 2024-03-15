@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 let User
+let Nota
 
 const connectDatabase = async () => {
     try {
@@ -19,6 +20,24 @@ const connectDatabase = async () => {
     }
 };
 
+const connectDatabaseNotas = async () => {
+    try {
+        if (!Nota) {
+            Nota = mongoose.model('Nota', require('../models/notesModel').schema);
+        }
+
+        await mongoose.connect('mongodb+srv://pipe2893:aXUEPTHj7VXOBLHr@cluster0.c5hjrub.mongodb.net/')
+        .then(() => console.log('Conectado a MongoDB'))
+        .catch((err) => console.log(err));
+
+        await initializeData();
+
+    }catch (error) {
+        console.error('Failed to connect to MongoDB:', error);
+        process.exit(1);
+    }
+};
+
 const initializeData = async () => {
     try {
         console.log('Data successfully initialized');
@@ -29,3 +48,5 @@ const initializeData = async () => {
 };
 
 module.exports = connectDatabase;
+
+module.exports = connectDatabaseNotas;

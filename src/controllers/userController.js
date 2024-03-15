@@ -12,6 +12,29 @@ const userController = {
         }
     },
 
+    getUserById: async (req, res) => {
+        const id = req.params.id;
+        try {
+            const userId = await User.findById(id)
+            res.json(userId);
+        } catch (error) {
+            console.error('Error al obtener usuarios:', error);
+            res.status(500).json({ message: 'Internal Server Error' });
+        }
+    },
+
+    getUserByName: async (req, res) => {
+        const {nombre} = res.params;
+        try {
+            const byNombre = await User.findOne({nombres: nombre})
+            res.json(byNombre);
+        } catch{
+            console.error('Error al obtener usuarios:', error);
+            res.status(500).json({ message: 'Internal Server Error' });
+        }
+    },
+
+
     // Crear un nuevo usuario
     createUser: async (req, res) => {
         const userData = req.body;
@@ -25,6 +48,7 @@ const userController = {
             res.status(500).json({ message: 'Internal Server Error' });
         }
     },
+
 
     // Otros métodos para manejar otras solicitudes relacionadas con los usuarios (actualizar, eliminar, etc.)
 
