@@ -24,10 +24,10 @@ const userController = {
     },
 
     getUserByName: async (req, res) => {
-        const {nombre} = res.params;
+        const {nombre} = req.params;
         try {
-            const byNombre = await User.findOne({nombres: nombre})
-            res.json(byNombre);
+            const nombreUsuario = await User.findOne({nombres: nombre})
+            res.json(nombreUsuario);
         } catch{
             console.error('Error al obtener usuarios:', error);
             res.status(500).json({ message: 'Internal Server Error' });
