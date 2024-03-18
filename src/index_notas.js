@@ -15,4 +15,4 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //Rutas
 app.use('/', routes);
 
-app.listen(port, () =>  console.log('listening athttp://localhost:${port}'));
+app.listen(port, () => console.log(`Listening at http://localhost:${port}`));

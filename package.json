@@ -11,8 +11,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "index1": "npx nodemon src/index.js",
-    "index2": "npx nodemon src/index_notas.js",
+    "usuarios": "npx nodemon src/index.js",
+    "notas": "npx nodemon src/index_notas.js",
+    "libros": "npx nodemon src-02/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -54,14 +54,12 @@ const userController = {
 
     // Actualizar un usuario existente
     updateUser: async (req, res) => {
-        const userId = req.params.id;
-        const newData = req.body;
         try {
-            const updatedUser = await User.findByIdAndUpdate(userId, newData, { new: true });
-            if (!updatedUser) {
-                return res.status(404).json({ message: 'Usuario no encontrado' });
-            }
-            res.json(updatedUser);
+            // const {_id} = req.params;
+            const {nombre} =req.params;
+            const userUpdate = await User.findOneAndUpdate({nombres: nombre}, {$set: {nombres:'Julian'}});
+            // const userUpdate = await User.findByIdAndUpdate({id: _id}, {$set: {nombres:miNombre}});
+            res.json(userUpdate)
         } catch (error) {
             console.error('Error al actualizar usuario:', error);
             res.status(500).json({ message: 'Internal Server Error' });
@@ -71,11 +69,9 @@ const userController = {
     // Eliminar un usuario existente
     deleteUser: async (req, res) => {
         try {
-            const deletedUser = await User.deleteMany();
-            if (!deletedUser) {
-                return res.status(404).json({ message: 'Usuario no encontrado' });
-            }
-            res.json({ message: 'Usuario eliminado correctamente' });
+            const {nombre} = req.params;
+            const deletedUser = await User.findOneAndDelete({nombres: nombre});
+            res.json(deletedUser);
         } catch (error) {
             console.error('Error al eliminar usuario:', error);
             res.status(500).json({ message: 'Internal Server Error' });
