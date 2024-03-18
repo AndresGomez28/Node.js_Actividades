@@ -10,13 +10,13 @@ router.post('/api/v1/libros', bookController.createBook);
 router.get('/api/v1/libros', bookController.getAllBooks);
 
 //3 consultar libro por Id
-router.get('/api/v1/libros/id/:id', bookController.getBookById);
+router.get("/api/v1/libros/referencia/:referencia", bookController.getBookByReference);
 
 //4 actualizar nombre de libro
-router.patch('/api/v1/libros/nombre/:nombre', bookController.updateBook);
+router.patch('/api/v1/libros/referencia/:referencia', bookController.updateBook);
 
 //5 borrar un libro por su nombre
-router.delete('/api/v1/libros/delete/:nombre', bookController.deleteBook);
+router.delete('/api/v1/libros/referencia/:referencia', bookController.deleteBook);
 
 
 module.exports = router;
