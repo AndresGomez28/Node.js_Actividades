@@ -18,7 +18,7 @@
     "usuarios": "npx nodemon src/index.js",
     "notas": "npx nodemon src/index_notas.js",
     "libros": "npx nodemon src-02/index.js",
-    "usuarios-2": "npx nodemon src-04/index.js",
+    "log-reg": "npx nodemon src-04/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -12,8 +12,6 @@ connectDB();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(auth.initialize())
-
 // Configura las rutas
 app.use('/', routes);
 
