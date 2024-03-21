@@ -10,6 +10,4 @@ router.post('/api/v1/profesores', profesoresController.createTeacher);
 router.patch('/api/v1/profesores/update/:nombre', profesoresController.updateTeacher);
 router.delete('/api/v1/profesores/delete/:nombre', profesoresController.deleteTeacher);
 
-
-
 module.exports = router;
