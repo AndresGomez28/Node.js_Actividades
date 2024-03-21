@@ -1,10 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser')
-const connectDB = require('../src-02/config/database');
-const routes = require('../src-02/routes/index');
+const connectDB = require('./config/database');
+const routes = require('./routes/index-profesores');
 
 const app = express();
-const port = 3002;
+const port = 3004;
 
 // Conecta a la base de datos MongoDB
 connectDB();

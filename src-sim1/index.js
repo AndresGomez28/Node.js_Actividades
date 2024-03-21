@@ -5,7 +5,7 @@ const routes = require('../src-sim1/routes/index');
 const auth = require('../src-sim1/middelware/auth');
 
 const app = express();
-const port = 3005;
+const port = 3006;
 
 // Conecta a la base de datos MongoDB
 connectDB();
