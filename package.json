@@ -17,8 +17,10 @@
   "scripts": {
     "usuarios": "npx nodemon src/index.js",
     "notas": "npx nodemon src/index_notas.js",
-    "libros": "npx nodemon src-02/index.js",
-    "log-reg": "npx nodemon src-04/index.js",
+    "libros": "npx nodemon src-libros/index.js",
+    "estudiantes": "npx nodemon src-estudiantes/index-estudiantes.js",
+    "profesores": "npx nodemon src-estudiantes/index-profesores.js",
+    "registro": "npx nodemon src-registro/index.js",
     "sim-1": "npx nodemon src-sim1/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

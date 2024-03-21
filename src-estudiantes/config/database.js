@@ -5,7 +5,7 @@ let Profesores
 const connectDatabaseEstudiantes = async () => {
     try {
         if (!Estudiantes) {
-            Estudiantes = mongoose.model('Estudiantes', require('../models/userModel').schema);
+            Estudiantes = mongoose.model('Estudiantes', require('../models/estudiantesModel').schema);
         }
 
         await mongoose.connect('mongodb+srv://pipe2893:aXUEPTHj7VXOBLHr@cluster0.c5hjrub.mongodb.net/')
@@ -23,7 +23,7 @@ const connectDatabaseEstudiantes = async () => {
 const connectDatabaseProfesores = async () => {
     try {
         if (!Profesores) {
-            Profesores = mongoose.model('Profesores', require('../models/notesModel').schema);
+            Profesores = mongoose.model('Profesores', require('../models/profesoresModel').schema);
         }
 
         await mongoose.connect('mongodb+srv://pipe2893:aXUEPTHj7VXOBLHr@cluster0.c5hjrub.mongodb.net/')

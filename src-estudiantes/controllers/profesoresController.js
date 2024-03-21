@@ -1,4 +1,4 @@
-const Profesores = require('../models/userModel');
+const Profesores = require('../models/profesoresModel');
 
 const profesoresController = {
     // Obtener todos los usuarios
@@ -48,9 +48,6 @@ const profesoresController = {
             res.status(500).json({ message: 'Internal Server Error' });
         }
     },
-
-
-    // Otros métodos para manejar otras solicitudes relacionadas con los usuarios (actualizar, eliminar, etc.)
 
     // Actualizar un usuario existente
     updateTeacher: async (req, res) => {
