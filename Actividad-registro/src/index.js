@@ -1,11 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser')
-const connectDB = require('../src-sim1/config/database');
-const routes = require('../src-sim1/routes/index');
-const auth = require('../src-sim1/middelware/auth');
+const connectDB = require('../src/config/database');
+const routes = require('../src/routes/index');
+const auth = require('../src/middelware/auth');
 
 const app = express();
-const port = 3006;
+const port = 3005;
 
 // Conecta a la base de datos MongoDB
 connectDB();
