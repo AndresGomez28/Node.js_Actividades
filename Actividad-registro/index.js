@@ -1,16 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser')
-const connectDB = require('./config/database');
-const routes = require('./routes/index-profesores');
+const connectDB = require('./src/config/database');
+const routes = require('./src/routes/index');
+const auth = require('./src/middelware/auth');
 
 const app = express();
-const port = 3004;
+const port = 3005;
 
 // Conecta a la base de datos MongoDB
 connectDB();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(auth.initialize())
 
 // Configura las rutas
 app.use('/', routes);
